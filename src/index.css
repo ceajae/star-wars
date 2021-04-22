@@ -5,10 +5,67 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(45deg, rgb(45, 54, 76) 0%, rgb(37, 45, 63) 100%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  padding: 30px 60px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.container header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container header i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.container header > h1 {
+  font-size: 1.9rem ;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.table_container {
+  overflow-x: auto;
+}
+
+.table_wrap {
+  text-align: center;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+}
+
+.table_wrap td, .table_wrap th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table_wrap tr:nth-child(even){background-color: #f2f2f2;}
+
+.table_wrap tr:hover {background-color: #ddd;}
+
+.table_wrap th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #1d1c1c;
+  color: white;
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+      padding: 20px;
+    }
 }

@@ -1,21 +1,29 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const Login = React.lazy(() => import("../common/header"));
+import Loader from "../common/loader";
+
+const Starships = React.lazy(() => import("../components/starships"));
+const Vehicles = React.lazy(() => import("../components/vehicles"));
+const Species = React.lazy(() => import("../components/species"));
+const Planets = React.lazy(() => import("../components/planets"));
+const People = React.lazy(() => import("../components/people"));
+const Films = React.lazy(() => import("../components/films"));
+const Home = React.lazy(() => import("../components/home"));
 
 const PublicRoutes = () => {
 
     return(
         <Router>
-            <React.Suspense fallback={<div>load</div>}>
+            <React.Suspense fallback={<Loader />}>
                 <Switch>
-                    <Route exact path="/" component={Login} />
-                    <Route exact path="/films" component={Login} />
-                    <Route exact path="/people" component={Login} />
-                    <Route exact path="/planets" component={Login} />
-                    <Route exact path="/species" component={Login} />
-                    <Route exact path="/vehicles" component={Login} />
-                    <Route exact path="/starships" component={Login} />
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/films" component={Films} />
+                    <Route exact path="/people" component={People} />
+                    <Route exact path="/planets" component={Planets} />
+                    <Route exact path="/species" component={Species} />
+                    <Route exact path="/vehicles" component={Vehicles} />
+                    <Route exact path="/starships" component={Starships} />
                 </Switch>
             </React.Suspense>
         </Router>

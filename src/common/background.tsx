@@ -1,4 +1,5 @@
 import Particles from 'react-particles-js';
+import '../assets/styles/background.css';
 
 const Background = () => {
     return (
@@ -7,45 +8,56 @@ const Background = () => {
             params={{
                 "particles": {
                     "number": {
-                        "value": 60,
+                        "value": 160,
                         "density": {
-                            "enable": true,
-                            "value_area": 1500
+                            "enable": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "speed": 4,
+                            "size_min": 0.3
                         }
                     },
                     "line_linked": {
-                        "enable": true,
-                        "opacity": 0.02
+                        "enable": false
                     },
                     "move": {
-                        "direction": "right",
-                        "speed": 0.05
+                        "random": true,
+                        "speed": 1,
+                        "direction": "top",
+                        "out_mode": "out"
                     },
-                    "size": {
-                        "value": 1
-                    },
-                    "opacity": {
-                        "anim": {
-                            "enable": true,
-                            "speed": 1,
-                            "opacity_min": 0.05
-                        }
-                    }
+                    "color": {
+                        "value": "#000000"
+                      },
                 },
                 "interactivity": {
                     "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "bubble"
+                        },
                         "onclick": {
                             "enable": true,
-                            "mode": "push"
+                            "mode": "repulse"
                         }
                     },
                     "modes": {
-                        "push": {
-                            "particles_nb": 1
+                        "bubble": {
+                            "distance": 250,
+                            "duration": 2,
+                            "size": 0,
+                            "opacity": 0
+                        },
+                        "repulse": {
+                            "distance": 400,
+                            "duration": 4
                         }
                     }
-                },
-                "retina_detect": true
+                }
             }}
         />
     )
