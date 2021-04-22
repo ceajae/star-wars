@@ -1,6 +1,5 @@
 {
   "name": "star-wars",
-  "homepage": "https://ceajae.github.io/star-wars",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
