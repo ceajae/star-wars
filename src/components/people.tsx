@@ -1,5 +1,6 @@
 import { useQuery } from "react-query";
 import { getPeople } from "../utils/api";
+import { FaLongArrowAltLeft } from 'react-icons/fa';
 
 import Loader from "../common/loader";
 
@@ -19,7 +20,7 @@ const People = (props: any) => {
     const goBack = () => {
         props.history.goBack();
     }
-    
+
     const renderTableData = (peopleList: Person[] | undefined) => {
         return peopleList && peopleList.map((person, key) => {
             return (
@@ -46,7 +47,7 @@ const People = (props: any) => {
             <section>
                 <header className="header">
                     <span onClick={goBack}>
-                        <i className='fas fa-long-arrow-alt-left'></i>
+                        <FaLongArrowAltLeft />
                     </span>
                     <h1>People</h1>
                 </header>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getIcon } from '../utils/helper';
+import { FaHeart, FaGlobe, FaUserFriends, FaUserAstronaut, FaTruckPickup, FaShip, FaFilm } from 'react-icons/fa';
+import { FiHeart } from 'react-icons/fi';
 import '../assets/styles/home.css';
 
 
@@ -47,15 +48,23 @@ const Home = () => {
         <div key={index}>
             <Link to={`./${category}`}>
                 <div className="category">
-                    <i className={getIcon(category)}></i>
-                    {category}
+                    { category === 'films' && <FaFilm /> }
+                    { category === 'planets' && <FaGlobe /> }
+                    { category === 'people' && <FaUserFriends /> }
+                    { category === 'species' && <FaUserAstronaut /> }
+                    { category === 'vehicles' && <FaTruckPickup /> }
+                    { category === 'starships' && <FaShip /> }
+
+                    <span className="title">
+                        {category}
+                    </span>
                 </div>
             </Link>
             <div className="favourite-icon" onClick={() => addFavourite(index)}>
                 {
                     favorites.includes(index)
-                    ? <i className='fas fa-heart'></i>
-                    : <i className='far fa-heart'></i>
+                    ? <FaHeart />
+                    : <FiHeart />
                 }
             </div>
         </div>

@@ -1,5 +1,6 @@
 import { useQuery } from "react-query";
 import { getSpecies } from "../utils/api";
+import { FaLongArrowAltLeft } from 'react-icons/fa';
 
 import Loader from "../common/loader";
 
@@ -48,7 +49,7 @@ const Species = (props: any) => {
             <section>
                 <header className="header">
                     <span onClick={goBack}>
-                        <i className='fas fa-long-arrow-alt-left'></i>
+                        <FaLongArrowAltLeft />
                     </span>
                     <h1>Species</h1>
                 </header>

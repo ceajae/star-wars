@@ -24,7 +24,7 @@ code {
   margin-bottom: 20px;
 }
 
-.container header i {
+.container header svg {
   font-size: 30px;
   cursor: pointer;
 }

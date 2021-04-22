@@ -1,5 +1,6 @@
 import { useQuery } from "react-query";
 import { getFilms } from "../utils/api";
+import { FaLongArrowAltLeft } from 'react-icons/fa';
 
 import Loader from "../common/loader";
 
@@ -46,7 +47,7 @@ const Films = (props: any) => {
             <section>
                 <header className="header">
                     <span onClick={goBack}>
-                        <i className='fas fa-long-arrow-alt-left'></i>
+                        <FaLongArrowAltLeft />
                     </span>
                     <h1>Films</h1>
                 </header>

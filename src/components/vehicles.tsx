@@ -1,5 +1,6 @@
 import { useQuery } from "react-query";
 import { getVehicles } from "../utils/api";
+import { FaLongArrowAltLeft } from 'react-icons/fa';
 
 import Loader from "../common/loader";
 
@@ -48,7 +49,7 @@ const Vehicles = (props: any) => {
             <section>
                 <header className="header">
                     <span onClick={goBack}>
-                        <i className='fas fa-long-arrow-alt-left'></i>
+                        <FaLongArrowAltLeft />
                     </span>
                     <h1>Vehicles</h1>
                 </header>
